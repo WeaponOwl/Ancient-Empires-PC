@@ -1,0 +1,173 @@
+@Case 0
+LoadTileset 1
+SetMapCursorVisible false
+SetGameActive false
+SetPlayerAI 1 1
+SetPlayerAI 2 2
+SetPlayerGold 1 0
+SetPlayerGold 2 0
+SetMainFraction 1
+SetColor 0 0 0
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 255 255 255
+ShowMessage 1 12
+Wait 2
+NextState 
+
+@Case 1
+
+SetUnitName 1 9 20
+GetUnitPlotRoute 1 9 4 9 true
+Wait 1,5
+GetUnitPlotRoute 0 8 3 8 true
+Wait 1,5
+GetUnitPlotRoute 0 10 3 10 true
+Wait 1,5
+MoveMapAndCursor 5 9
+NextState
+
+@Case 2
+ShowDialog 2 25
+GetUnit 9 3
+CreateSpriteAtUnit RedSpark 0 0
+Vibrate
+Wait 1
+ShowDialog 2 26
+CreateSpriteAtUnit Spark 0 0
+CreateSpriteAtUnit Smoke 0 0
+RemoveUnit
+NextState
+
+@Case 3
+MoveMapAndCursor king 1
+Wait 0,5
+ShowDialog 0 27
+Wait 0,2
+ShowDialog 5 28
+Wait 0,2
+ShowMessage 3 29
+Wait 4
+;ShowHelp 30
+SetMapCursorVisible true
+SetGameActive true
+StartPlay
+NextState
+
+@Case 4
+;Test AlphaMap > 0
+;ShowHelp 31
+;Wait 0,2
+NextState
+
+@Case 5
+Test SubMenu > 0
+;ShowHelp 32
+;Wait 0,2
+;ShowHelp 33
+;Wait 0,2
+;ShowHelp 34
+;Wait 0,2
+;ShowHelp 35
+;Wait 0,2
+NextState
+
+@Case 6
+;Test CountOfEnableUnits -1 1 = 0
+;ShowHelp 36
+;Wait 0,2
+NextState
+
+@Case 7
+;Test CurrentTurn >= 0
+;ShowHelp 37
+;Wait 0,2
+;ShowHelp 38
+;Wait 0,2
+NextState
+
+@Case 8
+;Test AlphaMap > 0
+;ShowHelp 39
+;Wait 0,2
+NextState
+
+@Case 9
+Test CountUnits -1 2 = 0
+SetGameActive false
+MoveMapAndCursor 1 1
+Wait 0,5
+CreateUnitPlotRoute 1 2 1 1 1 2 false
+Wait 0,5
+MoveMapAndCursor 10 10
+Wait 1
+CreateUnitPlotRoute 0 2 10 10 10 9 false
+Wait 0,5
+MoveMapAndCursor king 0
+Wait 0,2
+ShowDialog 5 40
+Wait 0,2
+ShowDialog 0 41
+ClearUnit
+SetGameActive true
+Wait 0,2
+NextState
+
+@Case 10
+Test CountUnits -1 2 = 0
+Test GameState = 0
+SetGameActive false
+SetMapCursorVisible false
+SetColor 255 255 255
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 0 0 0
+NextState
+
+@Case 11
+ShowDialog 2 42
+Wait 0,2
+ShowDialog 0 43
+Wait 0,2
+ShowDialog 2 44
+Wait 0,2
+ShowDialog 0 45
+Wait 0,2
+
+CompleteMission
+Wait 5
+LoadMap ae2mission2_To the rescue.am

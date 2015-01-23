@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameRe", "GameRe\GameRe\GameRe.csproj", "{CB4DC1D7-C709-423C-B38C-1D41961DFB1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameReContent", "GameRe\GameReContent\GameReContent.contentproj", "{56916577-C95F-47B1-9368-2A45C977698C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameReLauncher", "GameReLauncher\GameReLauncher.csproj", "{1F85F137-388E-4236-8EEF-013FB9F350A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB4DC1D7-C709-423C-B38C-1D41961DFB1E}.Debug|x86.ActiveCfg = Debug|x86
+		{CB4DC1D7-C709-423C-B38C-1D41961DFB1E}.Debug|x86.Build.0 = Debug|x86
+		{CB4DC1D7-C709-423C-B38C-1D41961DFB1E}.Release|x86.ActiveCfg = Release|x86
+		{CB4DC1D7-C709-423C-B38C-1D41961DFB1E}.Release|x86.Build.0 = Release|x86
+		{56916577-C95F-47B1-9368-2A45C977698C}.Debug|x86.ActiveCfg = Debug|x86
+		{56916577-C95F-47B1-9368-2A45C977698C}.Release|x86.ActiveCfg = Release|x86
+		{1F85F137-388E-4236-8EEF-013FB9F350A7}.Debug|x86.ActiveCfg = Debug|x86
+		{1F85F137-388E-4236-8EEF-013FB9F350A7}.Debug|x86.Build.0 = Debug|x86
+		{1F85F137-388E-4236-8EEF-013FB9F350A7}.Release|x86.ActiveCfg = Release|x86
+		{1F85F137-388E-4236-8EEF-013FB9F350A7}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

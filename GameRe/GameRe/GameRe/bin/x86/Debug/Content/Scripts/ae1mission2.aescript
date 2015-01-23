@@ -1,0 +1,125 @@
+@Case 0
+LoadTileset 0
+SetMapCursorVisible false
+SetGameActive false
+SetPlayerAI 1 1
+SetPlayerAI 2 2
+SetPlayerGold 1 0
+SetPlayerGold 2 0
+SetMainFraction 1
+SetEnableUnits 2
+SetColor 0 0 0
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 255 255 255
+ShowMessage 1 134
+Wait 2 
+NextState 
+
+@Case 1
+SetUnitName 9 14 140
+ShowHelp 154
+Wait 0,2
+ShowDialog 5 166
+Wait 0,2
+ShowMessage 2 145
+Wait 3
+StartPlay
+SetMapCursorVisible true
+SetGameActive true
+NextState
+
+@Case 2
+Test CountVillages 1 = 2
+Test GameState = 0
+SetGameActive false
+SetMapCursorVisible false
+MoveMapAndCursor 12 1
+Wait 1
+ShowDialog 5 167
+Wait 0,2
+ShowDialog 0 168
+Wait 0,2
+SetGameActive true
+SetMapCursorVisible true
+NextState
+
+@Case 3
+Test CountUnitsInRange 0 0 12 6 >= 1
+Test GameState = 0
+SetGameActive false
+SetMapCursorVisible false
+MoveMapAndCursor 12 1
+Wait 1
+CreateUnitPlotRoute 5 2 4 1 4 1 true
+Wait 0,1
+CreateUnitPlotRoute 5 2 2 2 2 2 true
+Wait 0,1
+CreateUnitPlotRoute 5 2 2 4 2 4 true
+Wait 0,1
+CreateUnitPlotRoute 2 1 10 2 8 3 true
+Wait 1,5
+SetUnitName 8 3 142
+CreateUnitPlotRoute 2 1 11 0 9 2 true
+Wait 2
+ClearUnit
+ShowDialog 5 169
+Wait 0,2
+MoveMapAndCursor king 1
+Wait 1
+ShowDialog 0 170
+Wait 0,2
+ShowDialog 5 171
+Wait 0,2
+SetGameActive true
+SetMapCursorVisible true
+NextState
+
+@Case 4
+Test CountOfEnableUnits -1 2 <= 1
+SetGameActive false
+SetMapCursorVisible false
+SetColor 255 255 255
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 0 0 0
+NextState
+
+@Case 5
+CompleteMission
+Wait 5
+LoadMap ae1mission3_Escort.am

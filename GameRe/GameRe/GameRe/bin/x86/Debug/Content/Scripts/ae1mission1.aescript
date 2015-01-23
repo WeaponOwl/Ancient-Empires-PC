@@ -1,0 +1,101 @@
+@Case 0
+LoadTileset 0
+SetMapCursorVisible false
+SetGameActive false
+SetPlayerAI 1 1
+SetPlayerAI 2 2
+SetPlayerGold 1 0
+SetPlayerGold 2 0
+SetMainFraction 1
+SetColor 0 0 0
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 255 255 255
+ShowMessage 1 133
+Wait 2 
+NextState 
+
+@Case 1
+SetUnitName 0 1 140
+ShowHelp 153
+Wait 0,2
+ShowDialog 5 162
+Wait 0,2
+ShowDialog 0 163
+Wait 0,2
+ShowDialog 5 164
+Wait 0,2
+ShowMessage 2 144
+Wait 3
+StartPlay
+SetMapCursorVisible true
+SetGameActive true
+NextState
+
+@Case 2
+Test CountUnitsInRange 0 7 9 9 >= 1
+Test GameState = 0
+SetGameActive false
+SetMapCursorVisible false
+CreateUnitPlotRoute 0 2 5 8 5 8 true
+CreateSpriteAtUnit Spark 0 0
+ClearUnit
+Wait 0,2
+ShowDialog 5 165
+Wait 0,2
+SetMapCursorVisible true
+SetGameActive true
+NextState
+
+@Case 3
+Test CountOfEnableUnits -1 2 = 0
+NextState
+
+@Case 4
+Test CountCastles 1 = 1
+SetGameActive false
+SetMapCursorVisible false
+SetColor 255 255 255
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 0 0 0
+NextState
+
+@Case 5
+CompleteMission
+Wait 5
+LoadMap ae1mission2_Friends and enemies.am

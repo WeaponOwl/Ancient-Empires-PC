@@ -1,0 +1,105 @@
+@Case 0
+LoadTileset 0
+SetMapCursorVisible false
+SetGameActive false
+SetPlayerAI 1 1
+SetPlayerAI 2 2
+SetPlayerGold 1 0
+SetPlayerGold 2 0
+SetMainFraction 1
+SetEnableUnits 2
+SetMapTile 5 12 54
+SetMapTile 6 12 55
+SetMapTile 7 12 55
+SetMapTile 8 12 55
+SetMapTile 9 12 56
+SetColor 0 0 0
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 255 255 255
+ShowMessage 1 135
+Wait 2 
+NextState 
+
+@Case 1
+SetUnitName 14 13 140
+SetUnitName 14 12 142
+ShowHelp 155
+Wait 0,2
+SetMapTile 5 12 15
+CreateParticle Spark 5,5 12,5
+Wait 0,1
+SetMapTile 6 12 1
+CreateParticle Spark 6,5 12,5
+Wait 0,1
+SetMapTile 7 12 1
+CreateParticle Spark 7,5 12,5
+Wait 0,1
+SetMapTile 8 12 1
+CreateParticle Spark 8,5 12,5
+Wait 0,1
+SetMapTile 9 12 14
+CreateParticle Spark 9,5 12,5
+Wait 0,1
+ShowDialog 5 172
+Wait 0,2
+ShowDialog 0 173
+Wait 0,2
+ShowDialog 5 174
+Wait 0,2
+ShowMessage 2 146
+Wait 3
+StartPlay
+SetMapCursorVisible true
+SetGameActive true
+NextState
+
+@Case 2
+Test CountCastles 1 = 1
+
+SetGameActive false
+SetMapCursorVisible false
+SetColor 255 255 255
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 0 0 0
+NextState
+
+@Case 3
+CompleteMission
+Wait 5
+LoadMap ae1mission4_Reinforcements.am

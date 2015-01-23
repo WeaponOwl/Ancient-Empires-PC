@@ -1,0 +1,24 @@
+@Case 0
+
+ShowMapName 
+Wait 2 
+ShowMessage 2 1
+Wait 3
+NextState 
+
+@Case 1
+StartPlay 
+NextState 
+
+@Case 2
+
+Test CountUnitsOfEnemyTeam -1 NowPlayerTeam = 0
+
+Test GameState = 0
+
+Wait 1 
+NextState 
+
+@Case 3
+
+CompleteBattle

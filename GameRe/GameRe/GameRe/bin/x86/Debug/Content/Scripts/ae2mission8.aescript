@@ -1,0 +1,262 @@
+@Case 0
+LoadTileset 1
+SetMapCursorVisible false
+SetGameActive false
+SetPlayerAI 1 1
+SetPlayerAI 2 2
+SetPlayerGold 1 400
+SetPlayerGold 2 400
+SetEnableUnits 8
+SetMainFraction 1
+SetColor 0 0 0
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 255 255 255
+ShowMessage 1 19
+Wait 2
+NextState
+
+@Case 1
+SetUnitName 8 15 20
+SetUnitName 6 15 21
+SetUnitName 3 9 22
+SetUnitName 13 4 22
+SetUnitName 7 4 23
+
+ShowDialog 0 110
+Wait 0,2
+MoveMapAndCursor 7 4
+Wait 2
+ShowDialog 4 111
+Wait 0,2
+ShowDialog 1 112
+Wait 0,2
+ShowDialog 4 113
+Wait 0,2
+GetUnitPlotRoute 5 2 7 2 true
+Wait 1
+RemoveUnit
+GetUnitPlotRoute 7 3 7 2 true
+Wait 1
+RemoveUnit
+GetUnitPlotRoute 9 2 7 2 true
+Wait 1
+RemoveUnit
+GetUnitPlotRoute 7 4 7 2 true
+Wait 1
+ClearUnit
+
+MoveMapAndCursor 9 15
+Wait 2
+ShowMessage 0,5 114
+Wait 1,5
+SetColor 0 0 0
+Wait 0,1
+SetColor 255 255 255
+GetUnit 9 15
+Wait 0,1
+CreateSpriteAtUnit Spark 0 0
+Wait 0,7
+ShowMessage 0,5 115
+Wait 1,5
+SetColor 255 0 0
+Wait 0,1
+SetColor 255 255 255
+Wait 0,1
+SetColor 255 0 0
+Wait 0,1
+SetColor 255 255 255
+Wait 0,1
+Vibrate
+CreateSpriteAtUnit Spark 32 0
+CreateSpriteAtUnit Spark -32 0
+CreateSpriteAtUnit Spark 0 32
+CreateSpriteAtUnit Spark 0 -32
+CreateSpriteAtUnit Spark 0 0
+Wait 0,7
+CreateSpriteAtUnit Spark 0 0
+RemoveUnit
+Wait 0,7
+ShowDialog 0 116
+Wait 0,2
+ShowDialog 4 117
+Wait 0,2
+ShowDialog 1 118
+Wait 0,2
+MoveMapAndCursor 3 9
+Wait 2
+MoveMapAndCursor 13 3
+Wait 2
+ShowDialog 5 119
+Wait 0,2
+
+ShowMessage 2 120
+Wait 3
+StartPlay
+SetMapCursorVisible true
+SetGameActive true
+NextState
+
+
+@Case 2
+Test CountUnits -1 2 = 0
+Test CountCastles 2 = 0
+Test GameState = 0
+Test SubMenu = 0
+SetMapCursorVisible false
+SetGameActive false
+NextState
+
+@Case 3
+SetColor 255 255 255
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 0 0 0
+Wait 0,1
+MoveMapAndCursor 7 2
+DeleteAllUnits
+
+CreateUnitPlotRoute 12 2 7 2 7 2 true
+Wait 0,1
+CreateUnitPlotRoute 9 1 6 3 6 3 true
+Wait 0,1
+CreateUnitPlotRoute 12 1 8 3 8 3 true
+Wait 0,1
+CreateUnitPlotRoute 0 1 6 1 6 1 true
+Wait 0,1
+CreateUnitPlotRoute 0 1 8 1 8 1 true
+Wait 0,1
+
+SetColor 0 0 0
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 255 255 255
+NextState
+
+@Case 4
+ShowDialog 4 121
+Wait 0,2
+ShowDialog 0 122
+Wait 0,2
+ShowDialog 4 123
+Wait 0,2
+GetUnit 7 2
+Vibrate
+SetColor 255 0 0
+Wait 0,1
+SetColor 255 255 255
+Wait 0,1
+SetColor 255 0 0
+Wait 0,1
+SetColor 255 255 255
+Wait 0,1
+Vibrate
+CreateSpriteAtUnit Spark 32 0
+CreateSpriteAtUnit Spark -32 0
+CreateSpriteAtUnit Spark 0 32
+CreateSpriteAtUnit Spark 0 -32
+CreateSpriteAtUnit Spark 0 0
+Wait 0,7
+SetColor 255 0 0
+Wait 0,1
+CreateSpriteAtUnit Spark 0 0
+Wait 0,7
+SetColor 255 255 255
+RemoveUnit
+Wait 0,1
+ShowDialog 5 124
+Wait 0,2
+ShowDialog 2 125
+Wait 0,2
+ShowDialog 1 126
+Wait 0,2
+ShowDialog 0 127
+Wait 0,2
+NextState
+
+@Case 5
+Wait 0,2
+SetColor 255 255 255
+Wait 0,2
+SetColor 225 225 225
+Wait 0,2
+SetColor 200 200 200
+Wait 0,2
+SetColor 175 175 175
+Wait 0,2
+SetColor 150 150 150
+Wait 0,2
+SetColor 125 125 125
+Wait 0,2
+SetColor 100 100 100
+Wait 0,2
+SetColor 75 75 75
+Wait 0,2
+SetColor 50 50 50
+Wait 0,2
+SetColor 25 25 25
+Wait 0,2
+SetColor 0 0 0
+Wait 0,2
+NextState
+
+@Case 6
+ShowMessage 3 128
+Wait 4
+ShowHelp 129
+Wait 0,2
+ShowHelp 130
+Wait 0,2
+ShowHelp 131
+Wait 0,2

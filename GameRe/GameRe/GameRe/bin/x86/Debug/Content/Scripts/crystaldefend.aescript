@@ -1,0 +1,275 @@
+@Case 0
+SetMapCursorVisible false
+SetGameActive false
+SetPlayerAI 1 1
+SetPlayerAI 2 2
+;SetMainFraction 1
+
+ShowMapName 
+Wait 2 
+ShowMessage 2 2
+Wait 3
+NextState 
+
+@Case 1
+ShowMessage 0,5 3
+Wait 1,5
+StartPlay 
+SetMapCursorVisible true
+SetGameActive true
+NextState 
+
+@Case 2
+Test CountUnitsOfEnemyTeam -1 NowPlayerTeam = 1
+Test GameState = 0
+Wait 1 
+NextState 
+
+@Case 3
+ShowMessage 0,5 4
+Wait 1,5
+SetMapCursorVisible false
+SetGameActive false
+CreateUnitPlotRoute 0 2 0 0 0 0 true
+CreateUnitPlotRoute 0 2 2 0 2 0 true
+CreateUnitPlotRoute 0 2 0 2 0 2 true
+
+CreateUnitPlotRoute 0 2 10 0 10 0 true
+CreateUnitPlotRoute 0 2 8 0 8 0 true
+CreateUnitPlotRoute 0 2 10 2 10 2 true
+
+CreateUnitPlotRoute 0 2 10 10 10 10 true
+CreateUnitPlotRoute 0 2 8 10 8 10 true
+CreateUnitPlotRoute 0 2 10 8 10 8 true
+
+CreateUnitPlotRoute 0 2 0 10 0 10 true
+CreateUnitPlotRoute 0 2 2 10 2 10 true
+CreateUnitPlotRoute 0 2 0 8 0 8 true
+
+ClearUnit
+Wait 0,01
+SetMapCursorVisible true
+SetGameActive true
+NextState 
+
+@Case 4
+Test CountUnitsOfEnemyTeam -1 NowPlayerTeam = 1
+Test GameState = 0
+Wait 1 
+NextState 
+
+@Case 5
+ShowMessage 0,5 5
+Wait 1,5
+SetMapCursorVisible false
+SetGameActive false
+CreateUnitPlotRoute 1 2 0 0 0 0 true
+CreateUnitPlotRoute 2 2 2 0 2 0 true
+CreateUnitPlotRoute 2 2 0 2 0 2 true
+
+CreateUnitPlotRoute 1 2 10 0 10 0 true
+CreateUnitPlotRoute 2 2 8 0 8 0 true
+CreateUnitPlotRoute 2 2 10 2 10 2 true
+
+CreateUnitPlotRoute 1 2 10 10 10 10 true
+CreateUnitPlotRoute 2 2 8 10 8 10 true
+CreateUnitPlotRoute 2 2 10 8 10 8 true
+
+CreateUnitPlotRoute 1 2 0 10 0 10 true
+CreateUnitPlotRoute 2 2 2 10 2 10 true
+CreateUnitPlotRoute 2 2 0 8 0 8 true
+
+ClearUnit
+Wait 0,01
+SetMapCursorVisible true
+SetGameActive true
+NextState 
+
+@Case 6
+Test CountUnitsOfEnemyTeam -1 NowPlayerTeam = 1
+Test GameState = 0
+Wait 1 
+NextState 
+
+@Case 7
+ShowMessage 0,5 6
+Wait 1,5
+SetMapCursorVisible false
+SetGameActive false
+CreateUnitPlotRoute 4 2 0 0 0 0 true
+CreateUnitPlotRoute 5 2 2 0 2 0 true
+CreateUnitPlotRoute 5 2 0 2 0 2 true
+
+CreateUnitPlotRoute 4 2 10 0 10 0 true
+CreateUnitPlotRoute 5 2 8 0 8 0 true
+CreateUnitPlotRoute 5 2 10 2 10 2 true
+
+CreateUnitPlotRoute 4 2 10 10 10 10 true
+CreateUnitPlotRoute 5 2 8 10 8 10 true
+CreateUnitPlotRoute 5 2 10 8 10 8 true
+
+CreateUnitPlotRoute 4 2 0 10 0 10 true
+CreateUnitPlotRoute 5 2 2 10 2 10 true
+CreateUnitPlotRoute 5 2 0 8 0 8 true
+
+ClearUnit
+Wait 0,01
+SetMapCursorVisible true
+SetGameActive true
+NextState 
+
+@Case 8
+Test CountUnitsOfEnemyTeam -1 NowPlayerTeam = 1
+Test GameState = 0
+Wait 1 
+NextState 
+
+@Case 9
+ShowMessage 0,5 7
+Wait 1,5
+SetMapCursorVisible false
+SetGameActive false
+CreateUnitPlotRoute 3 2 0 0 0 0 true
+CreateUnitPlotRoute 10 2 2 0 2 0 true
+CreateUnitPlotRoute 10 2 0 2 0 2 true
+
+CreateUnitPlotRoute 3 2 10 0 10 0 true
+CreateUnitPlotRoute 10 2 8 0 8 0 true
+CreateUnitPlotRoute 10 2 10 2 10 2 true
+
+CreateUnitPlotRoute 3 2 10 10 10 10 true
+CreateUnitPlotRoute 10 2 8 10 8 10 true
+CreateUnitPlotRoute 10 2 10 8 10 8 true
+
+CreateUnitPlotRoute 3 2 0 10 0 10 true
+CreateUnitPlotRoute 10 2 2 10 2 10 true
+CreateUnitPlotRoute 10 2 0 8 0 8 true
+
+ClearUnit
+Wait 0,01
+SetMapCursorVisible true
+SetGameActive true
+NextState 
+
+@Case 10
+Test CountUnitsOfEnemyTeam -1 NowPlayerTeam = 1
+Test GameState = 0
+Wait 1 
+NextState 
+
+@Case 11
+ShowMessage 0,5 8
+Wait 1,5
+SetMapCursorVisible false
+SetGameActive false
+CreateUnitPlotRoute 7 2 0 0 0 0 true
+CreateUnitPlotRoute 8 2 2 0 2 0 true
+CreateUnitPlotRoute 1 2 0 2 0 2 true
+
+CreateUnitPlotRoute 7 2 10 0 10 0 true
+CreateUnitPlotRoute 8 2 8 0 8 0 true
+CreateUnitPlotRoute 1 2 10 2 10 2 true
+
+CreateUnitPlotRoute 7 2 10 10 10 10 true
+CreateUnitPlotRoute 8 2 8 10 8 10 true
+CreateUnitPlotRoute 1 2 10 8 10 8 true
+
+CreateUnitPlotRoute 7 2 0 10 0 10 true
+CreateUnitPlotRoute 8 2 2 10 2 10 true
+CreateUnitPlotRoute 1 2 0 8 0 8 true
+
+ClearUnit
+Wait 0,01
+SetMapCursorVisible true
+SetGameActive true
+NextState 
+
+@Case 12
+Test CountUnitsOfEnemyTeam -1 NowPlayerTeam = 1
+Test GameState = 0
+Wait 1 
+NextState 
+
+@Case 13
+ShowMessage 0,5 9
+Wait 1,5
+SetMapCursorVisible false
+SetGameActive false
+CreateUnitPlotRoute 4 2 0 0 0 0 true
+CreateUnitPlotRoute 5 2 2 0 2 0 true
+CreateUnitPlotRoute 6 2 0 2 0 2 true
+
+CreateUnitPlotRoute 4 2 10 0 10 0 true
+CreateUnitPlotRoute 5 2 8 0 8 0 true
+CreateUnitPlotRoute 6 2 10 2 10 2 true
+
+CreateUnitPlotRoute 4 2 10 10 10 10 true
+CreateUnitPlotRoute 5 2 8 10 8 10 true
+CreateUnitPlotRoute 6 2 10 8 10 8 true
+
+CreateUnitPlotRoute 4 2 0 10 0 10 true
+CreateUnitPlotRoute 5 2 2 10 2 10 true
+CreateUnitPlotRoute 6 2 0 8 0 8 true
+
+ClearUnit
+Wait 0,01
+SetMapCursorVisible true
+SetGameActive true
+NextState 
+
+@Case 14
+Test CountUnitsOfEnemyTeam -1 NowPlayerTeam = 1
+Test GameState = 0
+Wait 1 
+NextState 
+
+@Case 15
+ShowMessage 0,5 10
+Wait 1,5
+SetMapCursorVisible false
+SetGameActive false
+CreateUnitPlotRoute 7 2 0 0 0 0 true
+CreateUnitPlotRoute 6 2 2 0 2 0 true
+CreateUnitPlotRoute 5 2 0 2 0 2 true
+CreateUnitPlotRoute 8 2 1 0 1 0 true
+CreateUnitPlotRoute 6 2 0 1 0 1 true
+
+CreateUnitPlotRoute 7 2 10 0 10 0 true
+CreateUnitPlotRoute 6 2 8 0 8 0 true
+CreateUnitPlotRoute 6 2 10 2 10 2 true
+CreateUnitPlotRoute 5 2 9 0 9 0 true
+CreateUnitPlotRoute 8 2 10 1 10 1 true
+
+CreateUnitPlotRoute 7 2 10 10 10 10 true
+CreateUnitPlotRoute 8 2 8 10 8 10 true
+CreateUnitPlotRoute 6 2 10 8 10 8 true
+CreateUnitPlotRoute 5 2 9 10 9 10 true
+CreateUnitPlotRoute 6 2 10 9 10 9 true
+
+CreateUnitPlotRoute 7 2 0 10 0 10 true
+CreateUnitPlotRoute 6 2 2 10 2 10 true
+CreateUnitPlotRoute 5 2 0 8 0 8 true
+CreateUnitPlotRoute 8 2 1 10 1 10 true
+CreateUnitPlotRoute 6 2 0 9 0 9 true
+
+CreateUnitPlotRoute 9 2 0 5 0 5 true
+CreateUnitPlotRoute 9 2 10 5 10 5 true
+CreateUnitPlotRoute 9 2 5 0 5 0 true
+CreateUnitPlotRoute 9 2 5 10 5 10 true
+
+ClearUnit
+Wait 0,01
+SetMapCursorVisible true
+SetGameActive true
+NextState 
+
+@Case 16
+Test CountUnitsOfEnemyTeam -1 NowPlayerTeam = 0
+Test GameState = 0
+Wait 1 
+NextState 
+
+@Case 17
+ShowMessage 2 11
+Wait 3
+CompleteBattle

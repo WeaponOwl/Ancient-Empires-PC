@@ -1,0 +1,200 @@
+@Case 0
+LoadTileset 1
+SetMapCursorVisible false
+SetGameActive false
+SetPlayerAI 1 1
+SetPlayerAI 2 2
+SetPlayerGold 1 400
+SetPlayerGold 2 400
+SetEnableUnits 8
+SetMainFraction 1
+SetColor 0 0 0
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 255 255 255
+ShowMessage 1 18
+Wait 2 
+NextState 
+
+@Case 1
+SetUnitName 14 3 20
+ShowDialog 5 97
+Wait 0,2
+ShowDialog 0 98
+Wait 0,2
+ShowMessage 4 99
+Wait 5
+StartPlay
+SetMapCursorVisible true
+SetGameActive true
+NextState
+
+@Case 2
+Test CurrentTurn >= 0
+SetMapCursorVisible false
+SetGameActive false
+MoveMapAndCursor 11 7
+CreateUnitPlotRoute 5 2 11 8 14 7 true
+Wait 3
+CreateUnitPlotRoute 0 2 11 8 13 7 true
+Wait 1,5
+CreateUnitPlotRoute 3 2 11 8 12 7 true
+Wait 1,5
+CreateUnitPlotRoute 1 2 11 8 13 8 true
+Wait 1,5
+ClearUnit
+ShowDialog 5 100
+MoveMapAndCursor king 1
+SetMapCursorVisible true
+SetGameActive true
+NextState
+
+@Case 3
+;Alt 1
+;Test CountUnits -1 2 = 0
+;Jump 1
+Test CurrentTurn >= 3
+SetMapCursorVisible false
+SetGameActive false
+CreateUnitPlotRoute 8 2 15 9 15 9 false
+Wait 0,2
+ShowDialog 5 101
+GetUnitById 11 1
+CreateSpriteAtUnit Spark 0 0
+Wait 0,5
+RemoveUnit
+Wait 0,5
+CreateUnitPlotRoute 11 1 15 8 15 8 false
+CreateSpriteAtUnit Spark 0 0
+Wait 1
+ShowDialog -2 102
+RemoveUnit
+Wait 0,2
+GetUnit 15 9
+RemoveUnit
+Remove 0,2
+ShowDialog 0 103
+Wait 0,2
+MoveMapAndCursor 1 9
+Wait 2,5
+SetUnitSpeed 0,1
+CreateUnitPlotRoute 9 2 0 8 0 9 false
+Wait 0,5
+SetUnitName 0 9 22
+CreateUnitPlotRoute 0 2 0 8 3 8 false
+Wait 1
+CreateUnitPlotRoute 0 2 0 10 1 10 false
+Wait 0,5
+
+CreateUnitPlotRoute 8 2 0 7 4 8 false
+Wait 1,5
+CreateUnitPlotRoute 8 2 0 11 2 10 false
+Wait 1
+
+CreateUnitPlotRoute 4 2 0 9 2 9 false
+Wait 1
+CreateUnitPlotRoute 6 2 0 9 4 9 false
+Wait 1,5
+CreateUnitPlotRoute 6 2 1 9 5 10 true
+Wait 2
+ClearUnit
+ShowDialog 3 104
+Wait 0,2
+MoveMapAndCursor 13 14
+Wait 2
+
+CreateUnitPlotRoute 0 2 13 14 12 14 false
+Wait 1
+CreateUnitPlotRoute 6 2 13 14 14 14 false
+Wait 0,5
+CreateUnitPlotRoute 2 2 13 14 13 12 false
+Wait 1
+CreateUnitPlotRoute 3 2 13 14 13 15 false
+Wait 1
+
+ShowDialog 5 105
+Wait 0,2
+ShowDialog 0 106
+Wait 0,2
+
+MoveMapAndCursor 13 17
+Wait 2
+CreateUnitPlotRoute 12 1 13 17 13 16 false
+Wait 1
+CreateUnitPlotRoute 6 1 12 17 12 16 false
+Wait 1
+CreateUnitPlotRoute 8 1 14 17 14 16 false
+SetUnitName 13 16 21
+Wait 1
+CreateUnitPlotRoute 4 1 13 17 13 17 false
+Wait 0,2
+CreateUnitPlotRoute 1 1 12 17 12 17 false
+Wait 0,2
+ClearUnit
+
+ShowDialog 1 107
+Wait 0,2
+
+SetUnitSpeed 0,05
+MoveMapAndCursor king 1
+ShowMessage 5 108
+Wait 6
+
+SetMapCursorVisible true
+SetGameActive true
+NextState
+
+@Case 4
+Test CountUnits -1 2 = 0
+Test CountCastles 2 = 0
+SetMapCursorVisible false
+SetGameActive false
+NextState
+
+@Case 5
+Wait 0,2
+SetColor 255 255 255
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 0 0 0
+Wait 0,2
+NextState
+
+@Case 6
+CompleteMission
+Wait 4
+LoadMap ae2mission8_Heaven's fury.am

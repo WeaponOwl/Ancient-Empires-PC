@@ -1,0 +1,177 @@
+@Case 0
+LoadTileset 1
+SetMapCursorVisible false
+SetGameActive false
+SetPlayerAI 1 1
+SetPlayerAI 2 2
+SetPlayerGold 1 400
+SetPlayerGold 2 400
+SetEnableUnits 6
+SetMainFraction 1
+SetColor 0 0 0
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 255 255 255
+ShowMessage 1 15
+Wait 2 
+NextState 
+
+@Case 1
+SetUnitName 3 5 20
+SetUnitName 13 9 22
+GetUnitPlotRoute 3 5 3 3 false
+Wait 1
+GetUnitPlotRoute 2 5 4 4 false
+Wait 1
+GetUnitPlotRoute 1 5 3 4 false
+Wait 1,5
+GetUnitPlotRoute 0 5 2 4 false
+Wait 1,5
+SetColor 255 255 255
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 0 0 0
+
+ShowDialog 2 77
+Wait 0,2
+ShowDialog 0 78
+Wait 0,2
+ShowDialog 5 79
+Wait 0,2
+GetUnit 3 3
+RemoveUnit
+GetUnit 4 4
+RemoveUnit
+GetUnit 2 4
+RemoveUnit
+GetUnit 3 4
+RemoveUnit
+CreateUnitPlotRoute 9 1 7 1 7 1 false
+SetUnitName 7 1 20
+Wait 0,01
+CreateUnitPlotRoute 3 1 3 3 3 3 false
+Wait 0,01
+CreateUnitPlotRoute 0 1 5 4 5 4 false
+Wait 0,01
+CreateUnitPlotRoute 2 1 7 5 7 5 false
+Wait 0,01
+SetColor 25 25 25
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 255 255 255
+MoveMapAndCursor 10 10
+SetUnitSpeed 0,02
+GetUnitPlotRoute 10 10 6 10 false
+Wait 4
+SetUnitSpeed 0,05
+CreateParticle RedSpark 4,5 9,5
+Wait 1,5
+DestroyBuilding 4 9
+CreateParticle Spark 4,5 9,5
+CreateParticle Smoke 4,5 9,5
+Wait 1
+ClearUnit
+MoveMapAndCursor 7 1
+Wait 1,5
+ShowDialog 0 80
+Wait 0,2
+ShowDialog 5 81
+Wait 0,2
+ShowMessage 4 82
+Wait 5
+StartPlay
+SetMapCursorVisible true
+SetGameActive true
+NextState
+
+@Case 2
+Test CountUnits -1 2 = 0
+Test CountCastles 2 = 0
+SetMapCursorVisible false
+SetGameActive false
+ShowDialog 5 83
+Wait 0,2
+ShowDialog 0 84
+Wait 0,2
+NextState
+
+
+@Case 3
+Wait 0,2
+SetColor 255 255 255
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 0 0 0
+Wait 0,2
+NextState
+
+@Case 4
+CompleteMission
+Wait 4
+LoadMap ae2mission5_Escort duty.am

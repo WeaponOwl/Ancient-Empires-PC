@@ -1,0 +1,87 @@
+@Case 0
+LoadTileset 1
+SetMapCursorVisible false
+SetGameActive false
+SetPlayerAI 1 1
+SetPlayerAI 2 2
+SetPlayerGold 1 600
+SetPlayerGold 2 600
+SetEnableUnits 7
+SetMainFraction 1
+SetColor 0 0 0
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 255 255 255
+ShowMessage 1 17
+Wait 2 
+NextState 
+
+@Case 1
+SetUnitName 5 17 21
+SetUnitName 5 5 22
+ShowDialog 1 93
+Wait 0,2
+ShowMessage 3 94
+Wait 4
+StartPlay
+SetMapCursorVisible true
+SetGameActive true
+NextState
+
+@Case 2
+Test CountUnits -1 2 = 0
+Test CountCastles 2 = 0
+Test GameState = 0
+Test SubMenu = 0
+SetMapCursorVisible false
+SetGameActive false
+ShowDialog 0 95
+NextState
+
+@Case 3
+Wait 0,2
+SetColor 255 255 255
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 0 0 0
+Wait 0,2
+NextState
+
+@Case 4
+CompleteMission
+Wait 4
+LoadMap ae2mission7_Rendezvous.am

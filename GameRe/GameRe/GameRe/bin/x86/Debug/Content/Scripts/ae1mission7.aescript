@@ -1,0 +1,138 @@
+@Case 0
+LoadTileset 0
+SetMapCursorVisible false
+SetGameActive false
+SetPlayerAI 1 1
+SetPlayerAI 2 2
+SetPlayerGold 1 0
+SetPlayerGold 2 0
+SetMainFraction 1
+SetEnableUnits 8
+SetColor 0 0 0
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 255 255 255
+ShowMessage 1 139
+Wait 2 
+NextState 
+
+@Case 1
+SetUnitName 10 13 140
+ShowHelp 159
+Wait 0,2
+;MoveMapAndCursor king 2
+;Wait 1
+
+CreateUnitPlotRoute 0 2 13 0 13 0 true
+CreateSpriteAtUnit Spark 0 0
+Wait 1
+CreateUnitPlotRoute 7 2 12 0 12 0 true
+CreateSpriteAtUnit Spark 0 0
+Wait 1
+
+CreateUnitPlotRoute 0 2 1 12 1 12 true
+CreateSpriteAtUnit Spark 0 0
+Wait 1
+CreateUnitPlotRoute 6 2 1 11 1 11 true
+CreateSpriteAtUnit Spark 0 0
+Wait 1
+
+CreateUnitPlotRoute 9 2 1 1 1 1 true
+CreateSpriteAtUnit Spark 0 0
+Wait 1
+CreateUnitPlotRoute 8 2 0 1 0 1 true
+CreateSpriteAtUnit Spark 0 0
+Wait 1
+CreateUnitPlotRoute 0 2 1 2 1 2 true
+CreateSpriteAtUnit Spark 0 0
+Wait 1
+ClearUnit
+
+ShowDialog 0 184
+Wait 0,2
+ShowDialog 3 185
+Wait 0,2
+ShowDialog 0 186
+Wait 0,2
+ShowMessage 2 150
+Wait 3
+StartPlay
+SetMapCursorVisible true
+SetGameActive true
+NextState
+
+@Case 2
+Test CountUnits 9 2 = 0
+;ShowDialog 5 181
+;Wait 0,2
+SetMapCursorVisible false
+SetGameActive false
+CreateUnitPlotRoute 9 2 1 1 1 1 true
+CreateSpriteAtUnit Spark 0 0
+Wait 1
+CreateSpriteAtUnit Spark 0 0
+CreateSpriteAtUnit Spark 32 32
+CreateSpriteAtUnit Spark -32 32
+CreateSpriteAtUnit Spark -32 -32
+CreateSpriteAtUnit Spark 32 -32
+Wait 1,2
+RemoveUnit
+CreateUnitPlotRoute 9 3 1 1 1 1 true
+CreateSpriteAtUnit Spark 0 0
+Wait 1,2
+ClearUnit
+ShowDialog 1 187
+Wait 0,2
+ShowDialog 0 188
+Wait 0,2
+SetColor 255 255 255
+Wait 0,1
+SetColor 225 225 225
+Wait 0,1
+SetColor 200 200 200
+Wait 0,1
+SetColor 175 175 175
+Wait 0,1
+SetColor 150 150 150
+Wait 0,1
+SetColor 125 125 125
+Wait 0,1
+SetColor 100 100 100
+Wait 0,1
+SetColor 75 75 75
+Wait 0,1
+SetColor 50 50 50
+Wait 0,1
+SetColor 25 25 25
+Wait 0,1
+SetColor 0 0 0
+ShowHelp 160
+Wait 0,2
+NextState
+
+@Case 3
+ShowMessage 3 128
+Wait 4
+ShowHelp 190
+Wait 0,2
+ShowHelp 130
+Wait 0,2
+ShowHelp 131
+Wait 0,2
